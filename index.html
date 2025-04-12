@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pearTour - Your Travel Companion</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fas fa-plane-departure"></i>
+          <h1>pearTour</h1>
+        </div>
+        <div class="nav-links">
+          <a href="#user-details">Profile</a>
+          <a href="#destination-select">Destinations</a>
+          <a href="#future-visits">My Trips</a>
+        </div>
+      </nav>
+      <div class="hero">
+        <h1>Discover Your Next Adventure</h1>
+        <p>Explore the world's most amazing destinations</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="user-details" class="section">
+        <div class="section-header">
+          <i class="fas fa-user-circle"></i>
+          <h2>Your Details</h2>
+        </div>
+        <form id="user-form">
+          <div class="form-group">
+            <label for="name"><i class="fas fa-user"></i> Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-phone"></i> Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-map-marker-alt"></i> Source Location</label>
+            <input
+              type="text"
+              id="source"
+              placeholder="Enter your current location"
+              required
+            />
+          </div>
+          <button type="submit">
+            <i class="fas fa-save"></i> Save Details
+          </button>
+        </form>
+      </section>
+
+      <section id="destination-select" class="section">
+        <div class="section-header">
+          <i class="fas fa-globe-americas"></i>
+          <h2>Select Destination</h2>
+        </div>
+        <div class="search-box">
+          <input
+            type="text"
+            id="destination-search"
+            placeholder="Search destinations..."
+          />
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="destination-grid">
+          <!-- Destination cards will be dynamically inserted here -->
+        </div>
+      </section>
+
+      <section id="destination-details" class="section">
+        <div class="section-header">
+          <i class="fas fa-info-circle"></i>
+          <h2>Destination Details</h2>
+        </div>
+        <div id="details-content">
+          <div class="details-tabs">
+            <button class="tab-btn active" data-tab="hotels">
+              <i class="fas fa-hotel"></i> Hotels
+            </button>
+            <button class="tab-btn" data-tab="transportation">
+              <i class="fas fa-bus"></i> Transportation
+            </button>
+            <button class="tab-btn" data-tab="attractions">
+              <i class="fas fa-landmark"></i> Attractions
+            </button>
+          </div>
+          <div id="tab-content"></div>
+        </div>
+      </section>
+
+      <section id="future-visits" class="section">
+        <div class="section-header">
+          <i class="fas fa-calendar-alt"></i>
+          <h2>My Future Visits</h2>
+        </div>
+        <div id="visits-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About pearTour</h3>
+          <p>
+            Your perfect travel companion for exploring the world's most amazing
+            destinations.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="#user-details">Profile</a>
+          <a href="#destination-select">Destinations</a>
+          <a href="#future-visits">My Trips</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-envelope"></i> info@peartour.com</p>
+          <p><i class="fas fa-phone"></i> +91 8220320785</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 pearTour. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
